@@ -1,0 +1,18 @@
+// Sass to Repeated Code
+@mixin flexCenter($dir: column) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $dir;
+ 
+}
+
+@mixin theme ($bg, $text){
+    background: $bg url(/img/dotted.png);
+    color: $text;
+}
+
+//Sass Functions
+@function weight($key){
+    @return map-get($font-weight, $key);
+}

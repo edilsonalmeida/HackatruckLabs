@@ -1,0 +1,141 @@
+//partial files
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+
+body{
+    background: $black;
+}
+
+.header-site{
+    background: $primary url(/img/dotted.png);
+    position: fixed;
+    width: 100%;
+    max-height: 100px;
+    z-index: 999;
+    box-shadow: 5px 5px 5px rgba($black, 0.3);
+    .logo{
+        padding: 20px;
+        max-width: 200px;
+    }
+}
+
+.hacka-banner {
+    padding: 0;
+    margin: 0;
+    overflow: hidden !important;
+    
+    .background {
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1;
+        width: 100%;
+    }
+    
+    .hacka-big {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        z-index: 2;
+        opacity: 0.5;
+    }
+
+    h1{
+        z-index: 3;
+        font-size: 3.5rem;
+        margin-top: 200px;
+        text-transform: uppercase;
+        font-weight: weight(bold);
+        letter-spacing: 2.5vh;
+        color:$white;
+    }
+}
+.card{
+
+    padding: 0 25vh;
+
+    h2{
+        @include flexCenter();
+        padding-top: 5vh;
+    }
+
+    .btn{
+        @include flexCenter();
+    }
+
+    .circle{
+        border-radius: 50%;
+        border: solid 5px #fff;
+        box-shadow: 5px 5px 5px rgba($black, 0.5);
+        width: 300px;
+        height: 300px;
+    }
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    @include flexCenter();
+
+    .container{
+        width: 80%;
+
+        @media(max-width: $mobileMax){
+            width: calc(100% - 40px);
+            padding: 80px 0 100px;
+        }
+
+        h1{
+            width: 100%;
+            font-size: 2.4rem;
+            text-align: left;
+            padding: 24px 0;
+            font-weight: weight(bold);
+        }
+
+        p {
+            text-indent: 50px;
+            line-height: 3.5rem;
+            font-size: 2rem;
+            @media(max-width: $mobileMax){
+                text-align: justify;
+            }
+        }
+
+        .actions{
+            @include flexCenter(row);
+            margin-top: 40px;
+
+            .btn{
+                margin: 0 auto;
+                padding: 8px;
+                border-radius: 8px;
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: inherit; 
+                font-weight:  weight(medium);
+                &:hover {
+                    color : #f00;
+                }
+            }
+            
+        }   
+    }
+
+    &.hacka {
+        @include theme($primary, $white)
+    }
+
+    &.instrutores {
+        @include theme($secondary, $black);
+        @include flexCenter(column);
+           
+    }
+}
+
