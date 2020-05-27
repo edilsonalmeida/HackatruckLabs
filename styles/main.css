@@ -42,6 +42,7 @@ code {
 
 body {
   background: #000;
+  width: 100%;
 }
 
 .header-site {
@@ -84,6 +85,12 @@ body {
   opacity: 0.5;
 }
 
+@media (max-width: 768px) {
+  .hacka-banner .hacka-big {
+    width: 80%;
+  }
+}
+
 .hacka-banner h1 {
   z-index: 3;
   font-size: 3.5rem;
@@ -94,8 +101,36 @@ body {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .hacka-banner h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+    letter-spacing: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
 .card {
   padding: 0 25vh;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 0;
+  }
 }
 
 .card h2 {
@@ -140,6 +175,24 @@ body {
   height: 300px;
 }
 
+@media (max-width: 768px) {
+  .card .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 section {
   width: 100%;
   height: 100vh;
@@ -160,14 +213,21 @@ section {
           flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  section {
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
 section .container {
   width: 80%;
 }
 
 @media (max-width: 768px) {
   section .container {
-    width: calc(100% - 40px);
-    padding: 80px 0 100px;
+    width: calc(100% - 100px);
+    padding: 30px 0 50px;
   }
 }
 
@@ -179,6 +239,12 @@ section .container h1 {
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  section .container h1 {
+    padding: 10px 0;
+  }
+}
+
 section .container p {
   text-indent: 50px;
   line-height: 3.5rem;
@@ -188,6 +254,8 @@ section .container p {
 @media (max-width: 768px) {
   section .container p {
     text-align: justify;
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
 }
 
@@ -206,6 +274,25 @@ section .container .actions {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  section .container .actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: calc(100% - 40px);
+  }
 }
 
 section .container .actions .btn {
